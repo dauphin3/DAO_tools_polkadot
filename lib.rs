@@ -2,9 +2,16 @@
 
 use ink_lang as ink;
 
-#[ink::contract]
-mod dao_council {
-    use super::*;
-    use mswallet::multisig_wallet;
-    use mint;
+pub type TokenId = u128;
+
+pub enum TokenType {
+    Coin,
+    Nft,
+    Auth,
+    Did,
+    Claim,
+}
+
+pub enum Params {
+    
 }

@@ -124,15 +124,14 @@ mod multisig_wallet {
             escrow: Option<Balance>, 
 
         ) -> Self {
-            // TODO: if number of dids != sigs then throw error
-                ink_lang::utils::initialize_contract(|wallet: &mut Self| {
+                ink_lang::utils::initialize_contract(|contract: &mut Self| {
                     
-                    wallet.owners = did_sigs.clone();
-                    wallet.escrow_balance = escrow;
-                    wallet.agents = Vec::from( 
+                    contract.owners = did_sigs.clone();
+                    contract.escrow_balance = escrow;
+                    contract.agents = Vec::from( 
                         // TODO: extract keys from Mapping
                     );
-                    wallet.accounts = Vec::new();
+                    contract.accounts = Vec::new();
                 })
         }
         /// Alternative initialization option

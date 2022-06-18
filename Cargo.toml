@@ -1,5 +1,5 @@
 [package]
-name = "tg_sc_mswallet"
+name = "dao_kit"
 version = "0.1.0"
 authors = ["zeek"]
 edition = "2021"
@@ -17,7 +17,7 @@ scale-info = { version = "2", default-features = false, features = ["derive"], o
 # accumulator = { path = "accumulator", default-features = false, features = ["ink-as-dependency"] }
 
 [lib]
-name = "tg_sc_mswallet"
+name = "dao_tools"
 path = "lib.rs"
 crate-type = [
 	# Used for normal contract Wasm blobs.
